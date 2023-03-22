@@ -1,4 +1,4 @@
-package Unit9_Inheritance.Lab;
+package U9Lab;
 
 public class CurableBacteria extends Bacterial {
     private String treatmentName;
@@ -7,7 +7,7 @@ public class CurableBacteria extends Bacterial {
     public CurableBacteria(double survivability, int numCases, int yearDiscovered, String origin, int numSurvived, int numDeaths, double resistant, String name, String treatmentName, int length) {
         super(survivability, numCases, yearDiscovered, origin, resistant, name, numSurvived, numDeaths);
         this.treatmentName = treatmentName;
-        this.treatmentLength = treatmentLength;
+        this.treatmentLength = length;
     }
 
     public CurableBacteria(String treatmentName, int treatmentLength) {
@@ -24,8 +24,8 @@ public class CurableBacteria extends Bacterial {
     }
 
     public void cure() {
-        int time = (int) (Math.random() * (treatmentLength - 1 + 1) + 1);
-        System.out.println("Someone with a new case of" + getName() + " was cursed with " + treatmentName + ". It took " + time + " days to cure.");
+        int time = (int) (Math.random() * (treatmentLength) + 1);
+        System.out.println("Someone with a new case of " + getName() + " was cured with " + treatmentName + ". It took " + time + " days to cure.");
         this.setNumCases(this.getNumCases() + 1);
         this.setNumSurvived(this.getNumSurvived() +1);
     }
