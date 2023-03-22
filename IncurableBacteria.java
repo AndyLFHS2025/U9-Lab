@@ -1,4 +1,4 @@
-package Unit9_Inheritance.Lab;
+package U9Lab;
 
 public class IncurableBacteria extends Bacterial{
     private int sicknessLen;
@@ -28,7 +28,9 @@ public class IncurableBacteria extends Bacterial{
 
     public void kill() {
         System.out.println("A person with a new case of " + getName() + " has died.");
-        this.setNumCases(this.getNumCases() + 1);
+        this.setNumCases(this.getNumCases() - 1);
         this.setNumDeaths(this.getNumDeaths() + 1);
+        System.out.println("Updated amount of cases worldwide: " + getNumCases());
+        System.out.println("Updated amount of cases that resulted in death: " + getNumDeaths());
     }
 }
