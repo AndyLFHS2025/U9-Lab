@@ -1,4 +1,4 @@
-package Unit9_Inheritance.Lab;
+package U9Lab;
 
 public class Disease {
     private double survivability;
@@ -36,7 +36,7 @@ public class Disease {
     public void infect(int people) {
         numCases += people;
         System.out.println(people + " people were infected with " + name + ", there are now "
-                           + numCases + " of " + name + " in the world.");
+                + numCases + " of " + name + " in the world.");
     }
 
 
