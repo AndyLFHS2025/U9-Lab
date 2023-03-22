@@ -1,4 +1,4 @@
-package Unit9_Inheritance.Lab;
+package U9Lab;
 
 public class Viral extends Disease {
     private boolean vaccine;
@@ -55,5 +55,3 @@ public class Viral extends Disease {
         this.vaccine = vaccine;
     }
 }
-
-
